@@ -32,7 +32,7 @@ const Advertisement: React.FC<AdvertisementProps> = ({ ad }) => {
 
   // Rasmning to'liq URL manzilini yaratamiz
   // Backend'dan "/media/..." kabi yo'l keladi, biz uning boshiga server manzilini qo'shamiz
-  const imageUrl = `http://api.florix.uz${ad.media}`;
+  const imageUrl = `https://api.florix.uz${ad.media}`;
 
   return (
     <motion.div
