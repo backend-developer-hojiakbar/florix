@@ -4,8 +4,10 @@ import { INITIAL_IMAGE_ANALYSIS_PROMPT_UZ, GEMINI_MODEL_NAME, CHAT_SYSTEM_PROMPT
 import { parseGeminiJsonResponse } from '../utils/jsonUtils';
 import { convertFileToBase64 } from '../utils/fileUtils';
 
+const GEMINI_API_KEY = "AIzaSyBE6UqGcqXFLMmOEUEgQEsom6-wCNsbH8k";
+
 const getApiKey = (): string => {
-  return "AIzaSyBbzhuYpbao8d4YBXXMumKsfOUSoIreHf8";
+  return GEMINI_API_KEY;
 };
 
 let ai: GoogleGenAI | null = null;
