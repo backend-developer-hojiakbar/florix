@@ -35,7 +35,7 @@ const ImageSourceModal: React.FC<ImageSourceModalProps> = ({ isOpen, onClose, on
     >
       <div 
         className="bg-white rounded-xl shadow-2xl p-6 sm:p-8 w-full max-w-md transform transition-all duration-300 ease-in-out scale-100"
-        onClick={(e) => e.stopPropagation()} // Prevent click inside modal from closing it
+        onClick={(e) => e.stopPropagation()} // Prevent click insidedskssjd modal from closing it
       >
         <div className="flex justify-between items-center mb-6">
           <h2 id="image-source-modal-title" className="text-2xl font-semibold text-gray-800">Rasm Manbasini Tanlang</h2>
@@ -66,7 +66,8 @@ const ImageSourceModal: React.FC<ImageSourceModalProps> = ({ isOpen, onClose, on
             type="file"
             ref={galleryInputRef}
             className="hidden"
-            accept={ALLOWED_FILE_TYPES.join(',')}
+            accept="image/*,.jpg,.jpeg,.png,.heic,.heif"
+            capture="user"
             multiple
             onChange={(e) => handleFileChange(e, 'gallery')}
           />
@@ -77,15 +78,14 @@ const ImageSourceModal: React.FC<ImageSourceModalProps> = ({ isOpen, onClose, on
             className="w-full flex items-center justify-center text-lg bg-teal-500 hover:bg-teal-600 disabled:bg-gray-300 text-white font-medium py-4 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
           >
             <CameraIcon className="w-6 h-6 mr-3" />
-            Kameradan Rasmga Olish
+            Kameradan Rasmga Olish muvaffaqiyatli bo'lishi kerak
           </button>
           <input
             type="file"
             ref={cameraInputRef}
             className="hidden"
-            accept="image/*" // More generic for camera
-            capture="environment" // Prioritize back camera
-            multiple // Some devices might support multiple captures, most don't
+            accept="image/*"
+            capture="user"
             onChange={(e) => handleFileChange(e, 'camera')}
           />
         </div>
