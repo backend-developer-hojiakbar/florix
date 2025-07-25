@@ -1,6 +1,6 @@
-
-
-export const GEMINI_MODEL_NAME = "gemini-2.5-flash-preview-04-17"; // Multimodal model
+// XATOLIK SABABI: "gemini-1.5-flash-preview-04-17" modeli eskirgan va o'chirilgan.
+// TO'G'IRLANGAN VARIANT: Eng so'nggi barqaror versiyaga ishora qiluvchi "gemini-1.5-flash-latest" dan foydalanamiz.
+export const GEMINI_MODEL_NAME = "gemini-1.5-flash-latest"; // Multimodal model
 
 export const MIN_IMAGES = 2;
 export const MAX_IMAGES = 4;
